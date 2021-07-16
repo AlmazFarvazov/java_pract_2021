@@ -1,0 +1,29 @@
+#admin:admin -> YWRtaW46YWRtaW4=
+#user:user -> dXNlcjp1c2Vy
+###
+GET http://localhost:8181/notes
+Authorization: Basic dXNlcjp1c2Vy
+
+###
+POST http://localhost:8181/notes
+Authorization: Basic YWRtaW46YWRtaW4=
+Content-Type: application/json
+
+{
+  "title": "Test4",
+  "content": "Test note #3!"
+}
+
+###
+PUT http://localhost:8181/notes/9
+Authorization: Basic YWRtaW46YWRtaW4=
+Content-Type: application/json
+
+{
+  "title": "Tes5",
+  "content": "Test the first note number one!"
+}
+
+###
+DELETE http://localhost:8181/notes/delete/9
+Authorization: Basic YWRtaW46YWRtaW4=
